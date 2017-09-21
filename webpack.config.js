@@ -7,6 +7,7 @@ module.exports = {
     context: path.resolve('js'),
     // entry: ["./utils", "./app"],
     entry:{
+        app:'./app',
         about:'./about_page.js',
         home:'./home_page.js',
         contact:'./contact_page.js'
@@ -45,6 +46,11 @@ module.exports = {
                 test: /\.scss$/,
                 exclude: /node_modules/,
                 loader: "style-loader!css-loader!sass-loader"
+            },
+            {
+                test:/\.(png|jpg)$/,
+                exclude: /node_modules/,
+                loader: "url-loader?limit=100000"
             }
         ]
     },
