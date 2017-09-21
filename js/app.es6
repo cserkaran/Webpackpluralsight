@@ -1,3 +1,4 @@
+
 import {login} from './login';
 login('admin','admin');
 document.write("Welcome to WebPack!!");

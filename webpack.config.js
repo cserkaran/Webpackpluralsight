@@ -35,6 +35,16 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "jshint-loader",
                 enforce: 'pre'
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                loader: "style-loader!css-loader"
+            },
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loader: "style-loader!css-loader!sass-loader"
             }
         ]
     },
